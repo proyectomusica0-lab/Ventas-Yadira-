@@ -428,7 +428,7 @@
 </head>
 <body>
 
-<a href="https://wa.me/5352012672" class="wsp-flotante" aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">
+<a href="https://wa.me/5352012672" class="wsp-flotante" aria-label="Escribir por WhatsApp" rel="noopener">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h0a7.94 7.94 0 0 0 7.94-7.94 7.9 7.9 0 0 0-2.4-5.64Zm-5.55 12.2h0a6.58 6.58 0 0 1-3.37-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1 1 12.26-3.5 6.56 6.56 0 0 1-6.66 6.6Zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64s-.32-.1-.45.1-.5.64-.62.77-.23.15-.43.05a5.4 5.4 0 0 1-2.7-2.36c-.2-.35.2-.33.58-1.08a.36.36 0 0 0 0-.35c-.05-.1-.45-1.08-.61-1.48-.16-.38-.33-.33-.45-.34h-.38a.75.75 0 0 0-.54.25 2.28 2.28 0 0 0-.7 1.68 3.97 3.97 0 0 0 .83 2.1 9.06 9.06 0 0 0 3.47 3.06c.48.21.86.33 1.15.42a2.76 2.76 0 0 0 1.27.08 2.1 2.1 0 0 0 1.37-.96 1.7 1.7 0 0 0 .12-.97c-.05-.09-.18-.14-.38-.24Z" fill="#fff"/></svg>
 </a>
 
@@ -935,7 +935,7 @@
       if(!resp.ok) throw new Error("No se pudo enviar");
 
       mensaje.style.color = "var(--azul-700)";
-      mensaje.textContent = "¡Gracias! Tu opinión se publicará luego de ser revisada.";
+      mensaje.textContent = "¡Gracias! Tu opinión será tomada en cuenta para mejorar nuestra web.";
       document.getElementById('opinionNombre').value = "";
       document.getElementById('opinionTexto').value = "";
       elegirEstrellas(0);
@@ -1229,7 +1229,7 @@ Total: ${totalTxt}`;
       console.error("Error preparando el guardado del pedido:", e);
     }
 
-    window.open(`https://wa.me/5352012672?text=${encodeURIComponent(mensaje)}`, '_blank');
+    window.location.href = `https://wa.me/5352012672?text=${encodeURIComponent(mensaje)}`;
   }
 
   function abrirFicha(id){
